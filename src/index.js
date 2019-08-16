@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom';
 
 class App extends React.Component {
   //fires when component first instantiated (1)
-  constructor(props) {
-    super(props);
-    this.state = { lat: null, errorMessage: '' };
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
+
+  state = { late: null, errorMessage: '' };
 
   //fires right after content shows up on screen (3)
   componentDidMount() {
