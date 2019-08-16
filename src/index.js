@@ -6,21 +6,16 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = { lat: null, errorMessage: '' };
-
-    window.navigator.geolocation.getCurrentPosition(
-      position => {
-        this.setState({ lat: position.coords.latitude });
-      },
-      err => {
-        this.setState({ errorMessage: err.message });
-      }
-    );
   }
 
   //fires right after content shows up on screen (3)
-  // componentDidMount() {
-  //   console.log('My component was rendered to the screen');
-  // }
+  componentDidMount() {
+    //console.log('My component was rendered to the screen');
+    window.navigator.geolocation.getCurrentPosition(
+      position => this.setState({ lat: position.coords.latitude }),
+      err => this.setState({ errorMessage: err.message })
+    );
+  }
 
   //fires right after a component updates--from state change (4)
   //this will hapen after componentDidMount when component is first rendered
