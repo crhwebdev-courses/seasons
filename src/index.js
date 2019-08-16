@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 class App extends React.Component {
+  //fires when component first instantiated (1)
   constructor(props) {
     super(props);
     this.state = { lat: null, errorMessage: '' };
@@ -16,6 +17,24 @@ class App extends React.Component {
     );
   }
 
+  //fires right after content shows up on screen (3)
+  // componentDidMount() {
+  //   console.log('My component was rendered to the screen');
+  // }
+
+  //fires right after a component updates--from state change (4)
+  //this will hapen after componentDidMount when component is first rendered
+  //and then will happen every time the component is updated
+  // componentDidUpdate() {
+  //   console.log('My compnent just upated--it rerendered!');
+  // }
+
+  //fires before component unmounts and is used for clean up (5)
+  // componentWillUnmount(){
+
+  // }
+
+  //fires after constructor and renders content to screen (2)
   render() {
     if (this.state.errorMessage && !this.state.lat) {
       return <div>Error: {this.state.errorMessage}</div>;
