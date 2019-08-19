@@ -32,8 +32,7 @@ class App extends React.Component {
 
   // }
 
-  //fires after constructor and renders content to screen (2)
-  render() {
+  renderContent() {
     if (this.state.errorMessage && !this.state.lat) {
       return <div>Error: {this.state.errorMessage}</div>;
     }
@@ -43,6 +42,11 @@ class App extends React.Component {
     }
 
     return <Spinner message="Retrieving Position..." />;
+  }
+
+  //fires after constructor and renders content to screen (2)
+  render() {
+    return <div className="border red">{this.renderContent()}</div>;
   }
 }
 
