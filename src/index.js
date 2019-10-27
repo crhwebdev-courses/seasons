@@ -3,7 +3,11 @@ import ReactDOM from 'react-dom';
 import SeasonDisplay from './SeasonDisplay';
 import Spinner from './Spinner';
 
-class App extends React.Component {
+const App = () => {
+  return <div>Hi There</div>;
+};
+
+class AppClass extends React.Component {
   //fires when component first instantiated (1)
   // constructor(props) {
   //   super(props);
