@@ -4,6 +4,12 @@ import SeasonDisplay from './SeasonDisplay';
 import Spinner from './Spinner';
 
 const App = () => {
+  // use two functions to set hook for setting state
+  // first destructred variable is the state variable
+  //and the second is the function for setting state
+  const [lat, setLat] = useState(null);
+  const [errorMessage, setErrorMessage] = useState(null);
+
   return <div>Hi There</div>;
 };
 
