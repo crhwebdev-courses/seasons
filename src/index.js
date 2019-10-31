@@ -19,7 +19,17 @@ const App = () => {
     );
   }, []);
 
-  return <div>Hi There</div>;
+  //render content based on conditions
+  let content;
+  if (errorMessage) {
+    content = <div>Error: {errorMessage}</div>;
+  } else if (lat) {
+    content = <SeasonDisplay lat={lat} />;
+  } else {
+    content = <Spinner message="Retrieving Position..." />;
+  }
+
+  return content;
 };
 
 class AppClass extends React.Component {
