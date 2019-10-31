@@ -10,6 +10,15 @@ const App = () => {
   const [lat, setLat] = useState(null);
   const [errorMessage, setErrorMessage] = useState(null);
 
+  //replaces componentDidMount lifecycle method
+  useEffect(() => {
+    //console.log('My component was rendered to the screen');
+    window.navigator.geolocation.getCurrentPosition(
+      position => setLat(position.coords.latitude),
+      err => setErrorMessage(err.message)
+    );
+  }, []);
+
   return <div>Hi There</div>;
 };
 
