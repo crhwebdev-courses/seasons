@@ -1,6 +1,6 @@
 ## Description
 
-This project was created for the Udemy course: Modern React & Reduxe [2019]. It shows the some icons and color display depending on the season. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created for the Udemy course: Modern React & Reduxe [2019]. It shows the some icons and color display depending on the season. It has been updated from using class based components to using functional components and hooks. The older class-based version is under the old-version branch. the This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
